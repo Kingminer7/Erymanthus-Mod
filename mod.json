@@ -1,0 +1,25 @@
+{
+	"geode": "5.5.3",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "km7dev.erymanthus-mod",
+	"name": "Erymanthus Mod",
+	"version": "v1.0.0",
+	"developer": "km7dev",
+	"description": "Replaces every button with Erymanthus.",
+	"dependencies": {
+		"geode.node-ids": ">=v1.23.3"
+	},
+    "resources": {
+        "files": [
+            "resources/*.ogg"
+        ],
+        "sprites": [
+            "resources/eri.png"
+        ]
+    }
+}

@@ -12,7 +12,8 @@
 	"developer": "km7dev",
 	"description": "Replaces every button with Erymanthus.",
 	"dependencies": {
-		"geode.node-ids": ">=v1.23.3"
+		"geode.node-ids": ">=v1.23.3",
+        "alphalaneous.alphas_geode_utils": ">=1.2.4"
 	},
     "resources": {
         "files": [
@@ -21,5 +22,14 @@
         "sprites": [
             "resources/eri.png"
         ]
+    },
+    "settings": {
+        "chance": {
+            "type": "int",
+            "name": "Chance",
+            "default": 50,
+            "min": 0,
+            "max": 100
+        }
     }
 }

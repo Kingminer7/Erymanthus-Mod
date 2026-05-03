@@ -98,7 +98,7 @@ void eryGeodeButton(Button* btn) {
 
 class $classModify(EryButton, geode::Button) {
     void modify() {
-        if (Loader::get()->isPatchless()) return log::warn("No geode::Button support, jitless detected.");
+        // if (Loader::get()->isPatchless()) return log::warn("No geode::Button support, jitless detected.");
         addErySprite(this);
 
         auto hook = VMTHookManager::get().addHook<ResolveC<EryButton>::func(&EryButton::activate)>(this, "geode::Button::activate");

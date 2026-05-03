@@ -8,7 +8,7 @@
 	},
 	"id": "km7dev.erymanthus-mod",
 	"name": "Erymanthus Mod",
-	"version": "v1.0.0",
+	"version": "v1.1.0",
 	"developer": "km7dev",
 	"description": "Replaces every button with Erymanthus.",
 	"dependencies": {

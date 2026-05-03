@@ -79,6 +79,27 @@ class $modify(CCEryItem, CCMenuItem) {
     }
 };
 
+#ifdef GEODE_IS_IOS
+
+#include <Geode/modify/CCMenuItemSprite.hpp>
+class $modify(CCEryItemSprite, CCMenuItemSprite) {
+	bool initWithNormalImage(CCNode* a, CCNode* b, CCNode* c, CCObject* rec, SEL_MenuHandler sel) {
+		if (!CCMenuItemSprite::initWithNormalImage(a, b, c, rec, sel)) {
+			return false;
+		}
+
+        addErySprite(this);
+		return true;
+	}
+
+    void activate() {
+        // ccmenuitemspriteextra breaks kinda when its not the orig method hooked
+        if (getUserFlag("mise")) return CCMenuItem::activate();
+        if (!rejectPress()) CCMenuItem::activate();
+    }
+};
+#endif
+
 #include <Geode/modify/CCMenuItemSpriteExtra.hpp>
 class $modify(CCEryItemSpriteExtra, CCMenuItemSpriteExtra) {
     bool init(CCNode* a, CCNode* b, CCObject* rec, SEL_MenuHandler sel) {
